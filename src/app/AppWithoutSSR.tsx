@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic'
 
 const AppWithoutSSR = dynamic(() => import('./App'), {
-  ssr: false,
+	ssr: false,
 });
 
 export default AppWithoutSSR;
