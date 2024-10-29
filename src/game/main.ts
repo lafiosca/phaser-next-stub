@@ -10,8 +10,19 @@ const config: Phaser.Types.Core.GameConfig = {
 	type: AUTO,
 	width: 1600,
 	height: 900,
-	zoom: 0.75,
-	parent: 'game-container',
+	scale: {
+		parent: 'game-container',
+		mode: Phaser.Scale.FIT,
+		autoCenter: Phaser.Scale.CENTER_BOTH,
+		min: {
+			width: 400,
+			height: 225,
+		},
+		max: {
+			width: 2400,
+			height: 1350,
+		},
+	},
 	backgroundColor: '#000000',
 	scene: [
 		Boot,
